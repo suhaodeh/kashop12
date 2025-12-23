@@ -178,3 +178,4 @@ D:\HMS\KASHOP12\KASHOP12\KASHOP12.PL\bin\Debug\net9.0\Mapster.Core.dll
 D:\HMS\KASHOP12\KASHOP12\KASHOP12.PL\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
 D:\HMS\KASHOP12\KASHOP12\KASHOP12.PL\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\HMS\KASHOP12\KASHOP12\KASHOP12.PL\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\HMS\KASHOP12\KASHOP12\KASHOP12.PL\obj\Debug\net9.0\KASHOP12.PL.sourcelink.json

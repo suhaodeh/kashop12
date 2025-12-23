@@ -1,6 +1,8 @@
 
 using System.Globalization;
+using KASHOP12.BLL.Service;
 using KASHOP12.DAL.Data;
+using KASHOP12.DAL.Repository;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
@@ -37,7 +39,8 @@ namespace KASHOP12.PL
             });
 
             builder.Services.AddSwaggerGen();
-
+            builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+            builder.Services.AddScoped<ICategoryService, CategoryService>();
 
             var app = builder.Build();
             app.UseRequestLocalization(app.Services.GetRequiredService<IOptions<RequestLocalizationOptions>>().Value);

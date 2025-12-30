@@ -1,0 +1,83 @@
+﻿using KASHOP12.BLL.Service;
+using KASHOP12.DAL.Data.DTO.Request;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+
+namespace KASHOP12.PL.Areas.Identity
+{
+    [Route("api/auth/[controller]")]
+    [ApiController]
+    public class AccountController : ControllerBase
+    {
+        private readonly IAuthenticationService _authenticationService;
+
+        public AccountController(IAuthenticationService authenticationService)
+        {
+            _authenticationService = authenticationService;
+        }
+
+        [HttpPost("login")]
+        public async Task<IActionResult> Register(LoginRequest request)
+        {
+            var result = await _authenticationService.LoginAsync(request);
+            if (!result.Success)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
+
+        }
+
+
+
+        [HttpPost("Register")]
+        public async Task<IActionResult> Register(RegisterRequest request)
+        {
+            var result = await _authenticationService.RegisterAsync(request);
+            if (!result.Success)
+            {
+                return BadRequest(result);
+            }
+            return Ok(result);
+
+        }
+
+
+
+        [HttpGet("confirmEmail")]
+        public async Task<IActionResult> ConfirmEmail (string token,string userId)
+        {
+            var result = await _authenticationService.ConfirmEmailAsync(token,userId);
+          
+            return Ok(result);
+
+        }
+        [HttpPost("sendcod")]
+        public async Task<IActionResult>RequestPasswordReset(ForgotPasswordRequest request)
+        {
+            var result = await _authenticationService.RequestPasswordReset(request);
+            if (!result.Success)
+            {
+                return BadRequest(result);
+            }
+            {
+                return Ok(result);
+                
+            }
+        }
+
+        [HttpPatch("ResetPassword")]
+        public async Task<IActionResult> ResetPassword(ResetPasswordRequest request)
+        {
+            var result = await _authenticationService.ResetPassword(request);
+            if (!result.Success)
+            {
+                return BadRequest(result);
+            }
+            {
+                return Ok(result);
+
+            }
+        }
+    }
+}

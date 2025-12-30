@@ -179,3 +179,9 @@ D:\HMS\KASHOP12\KASHOP12\KASHOP12.PL\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swa
 D:\HMS\KASHOP12\KASHOP12\KASHOP12.PL\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\HMS\KASHOP12\KASHOP12\KASHOP12.PL\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 D:\HMS\KASHOP12\KASHOP12\KASHOP12.PL\obj\Debug\net9.0\KASHOP12.PL.sourcelink.json
+D:\HMS\KASHOP12\KASHOP12\KASHOP12.PL\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\HMS\KASHOP12\KASHOP12\KASHOP12.PL\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\HMS\KASHOP12\KASHOP12\KASHOP12.PL\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\HMS\KASHOP12\KASHOP12\KASHOP12.PL\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
+D:\HMS\KASHOP12\KASHOP12\KASHOP12.PL\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll
+D:\HMS\KASHOP12\KASHOP12\KASHOP12.PL\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

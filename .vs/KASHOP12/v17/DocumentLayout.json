@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "D:\\HMS\\KASHOP12\\KASHOP12\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{50E92568-E5B4-49B2-8BF6-77FD9A964C91}|KASHOP12.BLL\\KASHOP12.BLL.csproj|d:\\hms\\kashop12\\kashop12\\kashop12.bll\\service\\iauthenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{50E92568-E5B4-49B2-8BF6-77FD9A964C91}|KASHOP12.BLL\\KASHOP12.BLL.csproj|solutionrelative:kashop12.bll\\service\\iauthenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2CD2183-ACF8-43FE-BF4D-2C8ECDFA8A80}|KASHOP12.PL\\KASHOP12.PL.csproj|d:\\hms\\kashop12\\kashop12\\kashop12.pl\\areas\\admin\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2CD2183-ACF8-43FE-BF4D-2C8ECDFA8A80}|KASHOP12.PL\\KASHOP12.PL.csproj|solutionrelative:kashop12.pl\\areas\\admin\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{50E92568-E5B4-49B2-8BF6-77FD9A964C91}|KASHOP12.BLL\\KASHOP12.BLL.csproj|d:\\hms\\kashop12\\kashop12\\kashop12.bll\\service\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{50E92568-E5B4-49B2-8BF6-77FD9A964C91}|KASHOP12.BLL\\KASHOP12.BLL.csproj|solutionrelative:kashop12.bll\\service\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FBDD960-0D9B-4F13-84A3-5FAC8147EB58}|KASHOP12.DAL\\KASHOP12.DAL.csproj|d:\\hms\\kashop12\\kashop12\\kashop12.dal\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FBDD960-0D9B-4F13-84A3-5FAC8147EB58}|KASHOP12.DAL\\KASHOP12.DAL.csproj|solutionrelative:kashop12.dal\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50E92568-E5B4-49B2-8BF6-77FD9A964C91}|KASHOP12.BLL\\KASHOP12.BLL.csproj|d:\\hms\\kashop12\\kashop12\\kashop12.bll\\service\\iauthenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50E92568-E5B4-49B2-8BF6-77FD9A964C91}|KASHOP12.BLL\\KASHOP12.BLL.csproj|solutionrelative:kashop12.bll\\service\\iauthenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5FBDD960-0D9B-4F13-84A3-5FAC8147EB58}|KASHOP12.DAL\\KASHOP12.DAL.csproj|d:\\hms\\kashop12\\kashop12\\kashop12.dal\\data\\dto\\request\\resetpasswordrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,11 +42,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CategoriesController.cs",
+              "DocumentMoniker": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.PL\\Areas\\Admin\\CategoriesController.cs",
+              "RelativeDocumentMoniker": "KASHOP12.PL\\Areas\\Admin\\CategoriesController.cs",
+              "ToolTip": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.PL\\Areas\\Admin\\CategoriesController.cs",
+              "RelativeToolTip": "KASHOP12.PL\\Areas\\Admin\\CategoriesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T20:21:18.052Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.DAL\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "KASHOP12.DAL\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.DAL\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "KASHOP12.DAL\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAowDsAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T16:44:04.117Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "ResetPasswordRequest.cs",
               "DocumentMoniker": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.DAL\\Data\\DTO\\Request\\ResetPasswordRequest.cs",
               "RelativeDocumentMoniker": "KASHOP12.DAL\\Data\\DTO\\Request\\ResetPasswordRequest.cs",
@@ -46,8 +80,7 @@
               "RelativeToolTip": "KASHOP12.DAL\\Data\\DTO\\Request\\ResetPasswordRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-30T17:40:05.446Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-30T17:40:05.446Z"
             },
             {
               "$type": "Document",
@@ -57,14 +90,14 @@
               "RelativeDocumentMoniker": "KASHOP12.BLL\\Service\\AuthenticationService.cs",
               "ToolTip": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.BLL\\Service\\AuthenticationService.cs",
               "RelativeToolTip": "KASHOP12.BLL\\Service\\AuthenticationService.cs",
-              "ViewState": "AgIAAO4AAAAAAAAAAAAQwPkAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAACIAAAAAAAAAAAAQwLcAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-24T16:55:46.709Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "IAuthenticationService.cs",
               "DocumentMoniker": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.BLL\\Service\\IAuthenticationService.cs",
               "RelativeDocumentMoniker": "KASHOP12.BLL\\Service\\IAuthenticationService.cs",
@@ -77,7 +110,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "ICategoryRepository.cs",
               "DocumentMoniker": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.DAL\\Repository\\ICategoryRepository.cs",
               "RelativeDocumentMoniker": "KASHOP12.DAL\\Repository\\ICategoryRepository.cs",
@@ -89,7 +122,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "ICategoryService.cs",
               "DocumentMoniker": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.BLL\\Service\\ICategoryService.cs",
               "RelativeDocumentMoniker": "KASHOP12.BLL\\Service\\ICategoryService.cs",
@@ -101,7 +134,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "CategoryService.cs",
               "DocumentMoniker": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.BLL\\Service\\CategoryService.cs",
               "RelativeDocumentMoniker": "KASHOP12.BLL\\Service\\CategoryService.cs",

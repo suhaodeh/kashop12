@@ -10,7 +10,7 @@ namespace KASHOP12.PL.Areas.Admin
 {
     [Route("api/Admin/[controller]")]
     [ApiController]
-    [Authorize]
+    [Authorize(Roles ="Admin")]
     public class CategoriesController : ControllerBase
     {
         private readonly ICategoryService _category;

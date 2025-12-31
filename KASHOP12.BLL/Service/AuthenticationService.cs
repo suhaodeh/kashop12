@@ -176,10 +176,12 @@ namespace KASHOP12.BLL.Service
 
         public async Task<string> GenerateAccessToken(ApplicationUser user)
         {
+            var roles = await _userManager.GetRolesAsync(user);
             var userClaimes = new List<Claim>()
             { new Claim("id",user.Id),
             new Claim("userName",user.UserName),
             new Claim("email",user.Email),
+            new Claim(ClaimTypes.Role,string.Join(',',roles))
         };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:secretkey"]));

@@ -2,6 +2,7 @@
 using System.Globalization;
 using System.Text;
 using System.Threading.Tasks;
+using KASHOP12.BLL.MapsterConfigurations;
 using KASHOP12.BLL.Service;
 using KASHOP12.DAL.Data;
 using KASHOP12.DAL.Models;
@@ -24,6 +25,7 @@ namespace KASHOP12.PL
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            builder.Services.AddHttpContextAccessor();
 
             builder.Services.AddControllers();
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
@@ -42,7 +44,7 @@ namespace KASHOP12.PL
                 Options.Password.RequireLowercase = true;
                 Options.Password.RequireUppercase = true;
                 Options.Password.RequireNonAlphanumeric = true;
-                Options.Password.RequiredLength = 10;
+                Options.Password.RequiredLength = 8;
 
                 Options.User.RequireUniqueEmail = true;
                 Options.Lockout.MaxFailedAccessAttempts = 5;
@@ -124,6 +126,8 @@ namespace KASHOP12.PL
 
             builder.Services.AddSwaggerGen();
             AppConfiguration.config(builder.Services);
+            MapsterConfig.MapsterConfigRegister();
+
 
 
 

@@ -9,8 +9,12 @@ namespace KASHOP12.DAL.Data.DTO.Response
 {
    public class CategoryResponse
     {
-  public int Id { get; set; }
+        public int Id { get; set; }
         public Status Status { get; set; }
+        public  string UserCreated { get; set; }
+
+
         public List<CategoryTranslationResponse> Translations { get; set; }
+      
     }
 }

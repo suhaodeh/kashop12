@@ -130,7 +130,7 @@ namespace KASHOP12.DAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Categories", (string)null);
                 });
 
             modelBuilder.Entity("KASHOP12.DAL.Models.CategoryTranslation", b =>
@@ -156,7 +156,7 @@ namespace KASHOP12.DAL.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("categoryTranslations");
+                    b.ToTable("categoryTranslations", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

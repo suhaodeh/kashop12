@@ -1,4 +1,5 @@
-﻿using KASHOP12.BLL.Service;
+﻿using System.Threading.Tasks;
+using KASHOP12.BLL.Service;
 using KASHOP12.DAL.Data.DTO.Request;
 using KASHOP12.PL.Resources;
 using Microsoft.AspNetCore.Http;
@@ -21,9 +22,9 @@ namespace KASHOP12.PL.Areas.User
         }
 
         [HttpGet("")]
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var response = _category.GetAllCategories();
+            var response =await _category.GetAllCategories();
             return Ok(new { message = _localizer["Success"].Value, response });
         }
 

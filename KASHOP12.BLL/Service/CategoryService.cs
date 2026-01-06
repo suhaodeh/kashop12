@@ -19,16 +19,18 @@ namespace KASHOP12.BLL.Service
         {
             _categoryRepository = categoryRepository;
         }
-        public CategoryResponse CreateCategory(CategoryRequest Request)
+        public async Task<CategoryResponse> CreateCategory(CategoryRequest Request)
         {
             var category = Request.Adapt<Category>();
-            _categoryRepository.Create(category);
+          await  _categoryRepository.CreateAsync(category);
             return category.Adapt<CategoryResponse>();
         }
 
-        public List<CategoryResponse> GetAllCategories()
+
+
+        public async Task< List<CategoryResponse>> GetAllCategories()
         {
-            var categories = _categoryRepository.GetAll();
+            var categories =await _categoryRepository.GetAllAsync();
 
             var response = categories.Adapt<List<CategoryResponse>>();
             return response;
@@ -36,5 +38,128 @@ namespace KASHOP12.BLL.Service
 
 
         }
+
+
+        public async Task<BaseResponse>ToggleStatus(int id)
+        {
+            try
+            {
+                var category = await _categoryRepository.FindByIdAsync(id);
+                if (category is null)
+                {
+                    return new BaseResponse
+                    {
+                        Success = false,
+                        Message = "Category Not Found",
+                    };
+                }
+                category.Status = category.Status == Status.Active ? Status.InActive : Status.Active;
+                await _categoryRepository.UpdateAsync(category);
+                return new BaseResponse
+                {
+                    Success = true,
+                    Message = "Category ststus updated successfully"
+                };
+
+
+                }catch(Exception ex)
+            {
+                return new BaseResponse
+                {
+                    Success = false,
+                    Message = "can not delete category",
+                    Errors = new List<string> { ex.Message }
+                };
+
+            }
+        }
+
+        public async Task<BaseResponse> DeleteCategoryAsync(int id)
+        {
+            try
+            {
+                var category = await _categoryRepository.FindByIdAsync(id);
+                if(category is null)
+                {
+                    return new BaseResponse
+                    {
+                        Success = false,
+                        Message = "Category Not Found",
+                    };
+                }
+                await _categoryRepository.DeleteAsync(category);
+                return new BaseResponse
+                {
+                    Success = true,
+                    Message = "Category deleted successfully",
+                };
+            }
+            
+            catch (Exception ex)
+            {
+                return new BaseResponse
+                {
+                    Success = false,
+                    Message = "can not delete category",
+                    Errors=new List<string> { ex.Message}
+                };
+            }
+
+           
+        }
+        public async Task<BaseResponse> UpdateCategoryAsync(int id,CategoryRequest request)
+        {
+            try
+            {
+                var category = await _categoryRepository.FindByIdAsync(id);
+                if(category is null)
+                {
+                    return new BaseResponse
+                    {
+                        Success = false,
+                        Message = "Category Not Found",
+                    };
+                }
+                if (request.Translations != null)
+                {
+                    foreach (var translation in request.Translations)
+                    {
+                        var existing = category.Translations.FirstOrDefault(t => t.Language == translation.Language);
+                        if (existing is not null)
+                        {
+                            existing.Name = translation.Name;
+                        }
+                        else
+                        {
+                            category.Translations.Add(new CategoryTranslation
+                            {
+                                Name = translation.Name,
+                                Language = translation.Language,
+                            });
+                        }
+
+                    } }
+                await _categoryRepository.UpdateAsync(category);
+                return new BaseResponse
+                    
+                        {
+                        Success = true,
+                        Message = "Category updated successfully"
+                    };
+                    
+                
+
+            }catch(Exception ex)
+            {
+                return new BaseResponse
+
+                {
+                    Success = false,
+                    Message = " can not delete Category ",
+                    Errors=new List<string> { ex.Message}
+                };
+            }
+        }
+        }
     }
-}
+

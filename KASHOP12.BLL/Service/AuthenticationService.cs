@@ -61,7 +61,7 @@ namespace KASHOP12.BLL.Service
                 var result = await _signInManager.CheckPasswordSignInAsync(user, loginRequest.Password, true);
 
 
-                if (!result.IsLockedOut)
+                if (result.IsLockedOut)
                 {
                     return new LoginResponse()
                     {

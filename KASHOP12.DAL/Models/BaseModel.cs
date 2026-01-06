@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace KASHOP12.DAL.Models
 {
-   public class BaseModel
+  public  class BaseModel
     {
         public int Id { get; set; }
 
@@ -20,6 +20,9 @@ namespace KASHOP12.DAL.Models
 
         public string CreatedBy { get; set; }
 
-        public string UpdatedBy { get; set; }
+        public string? UpdatedBy { get; set; }
+
+        [ForeignKey("CreatedBy")]
+        public ApplicationUser User { get; set; }
     }
 }

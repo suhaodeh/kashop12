@@ -1,7 +1,7 @@
 [
   {
     "ContainingType": "KASHOP12.PL.Areas.Admin.CategoriesController",
-    "Method": "Crerate",
+    "Method": "Crerat",
     "RelativePath": "api/Admin/Categories",
     "HttpMethod": "POST",
     "IsController": true,
@@ -10,6 +10,69 @@
       {
         "Name": "request",
         "Type": "KASHOP12.DAL.Data.DTO.Request.CategoryRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KASHOP12.PL.Areas.Admin.CategoriesController",
+    "Method": "Index",
+    "RelativePath": "api/Admin/Categories",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KASHOP12.PL.Areas.Admin.CategoriesController",
+    "Method": "DeletCategory",
+    "RelativePath": "api/Admin/Categories/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KASHOP12.PL.Areas.Admin.CategoriesController",
+    "Method": "UpdateCategory",
+    "RelativePath": "api/Admin/Categories/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "KASHOP12.DAL.Data.DTO.Request.CategoryRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "KASHOP12.PL.Areas.Admin.CategoriesController",
+    "Method": "ToggleStatus",
+    "RelativePath": "api/Admin/Categories/toggle-ststus/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],

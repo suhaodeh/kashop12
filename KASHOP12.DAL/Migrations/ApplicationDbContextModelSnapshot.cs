@@ -116,7 +116,7 @@ namespace KASHOP12.DAL.Migrations
 
                     b.Property<string>("CreatedBy")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("Status")
                         .HasColumnType("int");
@@ -125,12 +125,13 @@ namespace KASHOP12.DAL.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("UpdatedBy")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categories", (string)null);
+                    b.HasIndex("CreatedBy");
+
+                    b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("KASHOP12.DAL.Models.CategoryTranslation", b =>
@@ -156,7 +157,7 @@ namespace KASHOP12.DAL.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("categoryTranslations", (string)null);
+                    b.ToTable("categoryTranslations");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -290,6 +291,17 @@ namespace KASHOP12.DAL.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("UserTokens", (string)null);
+                });
+
+            modelBuilder.Entity("KASHOP12.DAL.Models.Category", b =>
+                {
+                    b.HasOne("KASHOP12.DAL.Models.ApplicationUser", "User")
+                        .WithMany()
+                        .HasForeignKey("CreatedBy")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("KASHOP12.DAL.Models.CategoryTranslation", b =>

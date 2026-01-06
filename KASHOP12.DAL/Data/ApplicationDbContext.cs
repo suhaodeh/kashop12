@@ -45,21 +45,26 @@ namespace KASHOP12.DAL.Data
         {
 
             var entries = ChangeTracker.Entries<BaseModel>();
-            var currentuserId = _ihttpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
-
-
-            foreach (var entityentry in entries)
+            if (_ihttpContextAccessor.HttpContext != null)
             {
-                if (entityentry.State == EntityState.Added)
-                {
-                    entityentry.Property(x => x.CreatedBy).CurrentValue = currentuserId;
-                    entityentry.Property(x => x.CreatedAt).CurrentValue = DateTime.UtcNow;
 
-                }
-                else if (entityentry.State == EntityState.Modified)
+
+                var currentuserId = _ihttpContextAccessor.HttpContext.User.FindFirst("id")?.Value;
+
+
+                foreach (var entityentry in entries)
                 {
-                    entityentry.Property(x => x.UpdatedBy).CurrentValue = currentuserId;
-                    entityentry.Property(x => x.UpdatedAt).CurrentValue = DateTime.UtcNow;
+                    if (entityentry.State == EntityState.Added)
+                    {
+                        entityentry.Property(x => x.CreatedBy).CurrentValue = currentuserId;
+                        entityentry.Property(x => x.CreatedAt).CurrentValue = DateTime.UtcNow;
+
+                    }
+                    else if (entityentry.State == EntityState.Modified)
+                    {
+                        entityentry.Property(x => x.UpdatedBy).CurrentValue = currentuserId;
+                        entityentry.Property(x => x.UpdatedAt).CurrentValue = DateTime.UtcNow;
+                    }
                 }
             }
             return base.SaveChangesAsync(cancellationToken);

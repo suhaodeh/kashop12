@@ -10,5 +10,6 @@ namespace KASHOP12.DAL.Data.DTO.Response
     {
      
         public string? AccessToken { get; set; }
+        public string? RefreshToken { get; set; }
     }
 }

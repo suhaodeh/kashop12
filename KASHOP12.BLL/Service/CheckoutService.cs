@@ -1,0 +1,156 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using KASHOP12.DAL.Data.DTO.Request;
+using KASHOP12.DAL.Data.DTO.Response;
+using KASHOP12.DAL.Models;
+using KASHOP12.DAL.Repository;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
+using Stripe.Checkout;
+
+namespace KASHOP12.BLL.Service
+{
+    public class CheckoutService : ICheckoutService
+    {
+        private readonly ICartRepository _cartRepository;
+        private readonly IOrderRepository _orderRepository;
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly IEmailSender _emailSender;
+
+        public CheckoutService(ICartRepository cartRepository,IOrderRepository orderRepository
+            ,UserManager<ApplicationUser> userManager,
+            IEmailSender emailSender)
+        {
+            _cartRepository = cartRepository;
+            _orderRepository = orderRepository;
+            _userManager = userManager;
+            _emailSender = emailSender;
+        }
+
+        public async Task<CheckoutResponse> ProcessPaymentAsync(CheckoutRequest request, string userId)
+        {
+            var cartItems = await _cartRepository.GetUserCartAsync(userId);
+            if (!cartItems.Any())
+            {
+                return new CheckoutResponse
+                {
+                    Success = false,
+                    Message = "cart is empty"
+                };
+            }
+
+            decimal totalAmount = 0;
+
+            foreach(var cart in cartItems)
+            {
+                if (cart.Product.Quantity < cart.Count)
+                {
+                    return new CheckoutResponse
+                    {
+                        Success = false,
+                        Message = "not enough stock"
+                    };
+                }
+                totalAmount += cart.Product.Price * cart.Count;
+            }
+
+            Order order = new Order
+            {
+                UserId = userId,
+                PaymentMethod = request.PaymentMethod,
+                AmountPaid = totalAmount,
+            };
+
+            if (request.PaymentMethod == PaymentMethodEnum.cash)
+            {
+                return new CheckoutResponse
+                {
+                    Success = true,
+                    Message = "cash",
+                };
+
+            }
+            else if (request.PaymentMethod == PaymentMethodEnum.visa)
+            {
+                var options = new SessionCreateOptions
+                {
+                    PaymentMethodTypes = new List<string> { "card" },
+                    LineItems=new List<SessionLineItemOptions>(),
+                    Mode = "payment",
+                    SuccessUrl = $"https://localhost:7245/api/checkouts/success?session_id={{CHECKOUT_SESSION_ID}}",
+                    CancelUrl = $"https://localhost:7245/checkout/cancel",
+                    Metadata=new Dictionary<string,string>
+                    {
+                        {"UserId",userId },
+                    }
+                 
+                };
+
+                foreach (var item in cartItems)
+                {
+
+                    options.LineItems.Add( new SessionLineItemOptions
+                        {
+                            PriceData = new SessionLineItemPriceDataOptions
+                            {
+                                Currency = "USD",
+                                ProductData = new SessionLineItemPriceDataProductDataOptions
+                                {
+                                    Name = item.Product.Translations .FirstOrDefault ()?.Name ??"Product",
+                                },
+                                UnitAmount = (long)item.Product.Price *100,
+                            },
+                            Quantity = item.Count,
+                        }
+                    );
+                }
+
+                var service = new SessionService();
+                var session = await service.CreateAsync(options);
+                order.SessionId = session.Id;
+                await _orderRepository.CreateAsync(order);
+                return new CheckoutResponse
+                {
+                    Success = true,
+                    Message = "payment session created",
+                    Url = session.Url
+                };
+
+
+            }
+
+            else
+            {
+                return new CheckoutResponse
+                {
+                    Success = false,
+                    Message = "Invalid payment method"
+                };
+            }
+          
+        }
+
+        public async Task<CheckoutResponse> HandleSuccessAsync(string sessionId)
+        {
+             var service = new Stripe.Checkout.SessionService();
+            var session = service.Get(sessionId);
+            var userId = session.Metadata["UserId"];
+
+            var order = await _orderRepository.GetBySessionIdAsync(sessionId);
+            order.PaymentId = session.PaymentIntentId;
+            order.OrderStatus = OrderStatusEnum.Approved;
+            await _orderRepository.UpdateAsync(order);
+            var user = await _userManager.FindByIdAsync(userId);
+            await _emailSender.SendEmailAsync(user.Email, "Payment Successfull", "<h2> Thank you ......</h2>");
+
+            return new CheckoutResponse
+            {
+                Success = true,
+                Message = "Payment Completed Successfully"
+            };
+        }
+    }
+}

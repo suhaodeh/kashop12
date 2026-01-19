@@ -2,6 +2,7 @@
 using System.Globalization;
 using System.Text;
 using System.Threading.Tasks;
+using KASHOP12.BLL;
 using KASHOP12.BLL.MapsterConfigurations;
 using KASHOP12.BLL.Service;
 using KASHOP12.DAL.Data;
@@ -15,6 +16,7 @@ using Microsoft.AspNetCore.Localization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using Stripe;
 
 namespace KASHOP12.PL
 {
@@ -36,8 +38,11 @@ namespace KASHOP12.PL
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-          
-            
+            builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
+            StripeConfiguration.ApiKey = builder.Configuration["Stripe:SecretKey"];
+
+
+
             builder.Services.AddIdentity<ApplicationUser, IdentityRole>(Options=>
             {
                 Options.Password.RequireDigit = true;
@@ -143,7 +148,7 @@ namespace KASHOP12.PL
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
-
+            app.UseStaticFiles();
             app.UseHttpsRedirection();
 
             app.UseAuthorization();

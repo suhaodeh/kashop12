@@ -19,6 +19,12 @@ namespace KASHOP12.DAL.Data
 
         public DbSet<Category> Categories { get; set; }
         public DbSet<CategoryTranslation> categoryTranslations { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<ProductTranslations> ProductTranslations { get; set; }
+        public DbSet<Cart>Carts { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderItem> OrderItems { get; set; }
+
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options,
             IHttpContextAccessor ihttpContextAccessor)
     : base(options)
@@ -39,8 +45,26 @@ namespace KASHOP12.DAL.Data
 
             builder.Entity<IdentityUserLogin<string>>().ToTable("UserLogins");
             builder.Entity<IdentityUserToken<string>>().ToTable("UserTokens");
-         
-    }
+
+
+            builder.Entity<Category>().HasOne(c => c.User)
+                .WithMany().HasForeignKey(c => c.CreatedBy)
+                .OnDelete(DeleteBehavior.NoAction);
+
+            builder.Entity<Cart>().HasOne(c => c.User)
+         .WithMany().HasForeignKey(c => c.UserId)
+         .OnDelete(DeleteBehavior.NoAction);
+
+            builder.Entity<Product>().HasOne(c => c.User)
+.WithMany().HasForeignKey(c => c.CreatedBy)
+.OnDelete(DeleteBehavior.NoAction);
+
+            builder.Entity<Order>().HasOne(c => c.User)
+.WithMany().HasForeignKey(c => c.UserId)
+.OnDelete(DeleteBehavior.NoAction);
+
+
+        }
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
 
@@ -49,7 +73,7 @@ namespace KASHOP12.DAL.Data
             {
 
 
-                var currentuserId = _ihttpContextAccessor.HttpContext.User.FindFirst("id")?.Value;
+                var currentuserId = _ihttpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
 
 
                 foreach (var entityentry in entries)
@@ -76,6 +100,7 @@ namespace KASHOP12.DAL.Data
         {
             var entries = ChangeTracker.Entries<BaseModel>();
             var currentuserId = _ihttpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
+
 
             foreach(var entityentry in entries)
             {

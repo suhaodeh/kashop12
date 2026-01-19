@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.PL\\wwwroot\\Images\\680dd596-b330-49ed-a2f7-3b5ab36c3a5d.jpg",
+      "PackagePath": "staticwebassets\\Images\\680dd596-b330-49ed-a2f7-3b5ab36c3a5d.jpg"
+    },
+    {
+      "Id": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.PL\\wwwroot\\Images\\b7744fca-330c-497c-8bb1-c1bfa666970a.jpg",
+      "PackagePath": "staticwebassets\\Images\\b7744fca-330c-497c-8bb1-c1bfa666970a.jpg"
+    },
+    {
+      "Id": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.PL\\wwwroot\\Images\\c00346b0-4621-4622-a77c-f5c0eb9290ef.jpg",
+      "PackagePath": "staticwebassets\\Images\\c00346b0-4621-4622-a77c-f5c0eb9290ef.jpg"
+    },
+    {
+      "Id": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.PL\\wwwroot\\Images\\de413b67-bb4c-4861-b29c-90d691efd1a0.jpg",
+      "PackagePath": "staticwebassets\\Images\\de413b67-bb4c-4861-b29c-90d691efd1a0.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.KASHOP12.PL.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.KASHOP12.PL.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.KASHOP12.PL.props",
+      "PackagePath": "build\\KASHOP12.PL.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.KASHOP12.PL.props",
+      "PackagePath": "buildMultiTargeting\\KASHOP12.PL.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.KASHOP12.PL.props",
+      "PackagePath": "buildTransitive\\KASHOP12.PL.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

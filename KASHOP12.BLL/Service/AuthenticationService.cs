@@ -12,6 +12,7 @@ using KASHOP12.DAL.Models;
 using Mapster;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 
@@ -23,14 +24,16 @@ namespace KASHOP12.BLL.Service
         private readonly IConfiguration _configuration;
         private readonly IEmailSender _emailSender;
         private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly ITokenService _tokenService;
 
         public AuthenticationService(UserManager<ApplicationUser> userManager, IConfiguration configuration, IEmailSender emailSender,
-            SignInManager<ApplicationUser> signInManager)
+            SignInManager<ApplicationUser> signInManager,ITokenService tokenService)
         {
             _userManager = userManager;
             _configuration = configuration;
             _emailSender = emailSender;
             _signInManager = signInManager;
+            _tokenService = tokenService;
         }
         public async Task<LoginResponse> LoginAsync(LoginRequest loginRequest)
         {
@@ -90,13 +93,18 @@ namespace KASHOP12.BLL.Service
                 }
 
 
-
+                var accessToken = await _tokenService.GenerateAccessToken(user);
+                var refreshToken = _tokenService.GenerateRefreshToken();
+                user.RefreshToken = refreshToken;
+                user.RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(7);
+                await _userManager.UpdateAsync(user);
 
                 return new LoginResponse()
                 {
                     Success = true,
                     Message = "login successfully",
-                    AccessToken = await GenerateAccessToken(user),
+                    AccessToken = accessToken,
+                    RefreshToken=refreshToken,
 
 
                 };
@@ -174,28 +182,7 @@ namespace KASHOP12.BLL.Service
         }
 
 
-        public async Task<string> GenerateAccessToken(ApplicationUser user)
-        {
-            var roles = await _userManager.GetRolesAsync(user);
-            var userClaimes = new List<Claim>()
-            { new Claim("id",user.Id),
-            new Claim("userName",user.UserName),
-            new Claim("email",user.Email),
-            new Claim(ClaimTypes.Role,string.Join(',',roles))
-        };
-
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:secretkey"]));
-            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-
-            var token = new JwtSecurityToken(
-                issuer: _configuration["Jwt:Issuer"],
-                audience: _configuration["Jwt:Audience"],
-                claims: userClaimes,
-                expires: DateTime.UtcNow.AddMinutes(30),
-                signingCredentials: creds);
-
-            return new JwtSecurityTokenHandler().WriteToken(token);
-        }
+   
 
         public async Task<ForgotPasswordResponse> RequestPasswordReset(ForgotPasswordRequest request)
         {
@@ -273,6 +260,37 @@ namespace KASHOP12.BLL.Service
             {
                 Success = true,
                 Message = "Password reset successfully"
+            };
+        }
+
+        public async Task<LoginResponse>RefreshTokenAsync(TokenApiModel request)
+        {
+            string accessToken = request.AccessToken;
+            string refreshToken = request.RefreshToken;
+
+            var principal = _tokenService.GetPrincipalFromExpiredToken(accessToken);
+            var userName = principal.Identity.Name;
+
+            var user = await _userManager.Users.FirstOrDefaultAsync(u => u.UserName == userName);
+            if ((user is null || user.RefreshToken != refreshToken || user.RefreshTokenExpiryTime <=DateTime.UtcNow))
+            {
+                return new LoginResponse()
+                {
+                    Success = false,
+                    Message="Invalid client request"
+               
+                }; }
+
+            var newAccessToken = await _tokenService.GenerateAccessToken(user);
+            var newRefreshToken = _tokenService.GenerateRefreshToken();
+            user.RefreshToken = newRefreshToken;
+
+            return new LoginResponse
+            {
+                Success = true,
+                Message = "Token Refreshed",
+                AccessToken = newAccessToken,
+                RefreshToken = newRefreshToken,
             };
         }
 

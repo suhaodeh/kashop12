@@ -19,4 +19,14 @@
     <ProjectReference Include="..\KASHOP12.BLL\KASHOP12.BLL.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\Images\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Images\680dd596-b330-49ed-a2f7-3b5ab36c3a5d.jpg" />
+    <None Include="wwwroot\Images\b7744fca-330c-497c-8bb1-c1bfa666970a.jpg" />
+    <None Include="wwwroot\Images\de413b67-bb4c-4861-b29c-90d691efd1a0.jpg" />
+  </ItemGroup>
+
 </Project>

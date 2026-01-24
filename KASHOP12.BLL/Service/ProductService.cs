@@ -8,6 +8,7 @@ using KASHOP12.DAL.Data.DTO.Response;
 using KASHOP12.DAL.Models;
 using KASHOP12.DAL.Repository;
 using Mapster;
+using Microsoft.EntityFrameworkCore;
 
 namespace KASHOP12.BLL.Service
 {
@@ -38,11 +39,13 @@ namespace KASHOP12.BLL.Service
 
      
 
-        public async Task<List<ProductUserResponse>> GetAllProductsForUser()
+        public async Task<List<ProductUserResponse>> GetAllProductsForUser(int page=1,int limit =3)
         {
-            var products = await _productRepository.GetAllAsync();
+            var query =  _productRepository.Query();
+            var totalCount = await query.CountAsync();
+            query = query.Skip((page - 1) * limit).Take(limit);
 
-            var response = products.Adapt<List<ProductUserResponse>>();
+            var response = query.Adapt<List<ProductUserResponse>>();
             return response;
         }
 

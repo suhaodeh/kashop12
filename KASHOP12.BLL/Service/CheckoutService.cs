@@ -19,15 +19,21 @@ namespace KASHOP12.BLL.Service
         private readonly IOrderRepository _orderRepository;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly IEmailSender _emailSender;
+        private readonly IOrderItemRepository _orderItemRepository;
+        private readonly IProductRepository _productRepository;
 
         public CheckoutService(ICartRepository cartRepository,IOrderRepository orderRepository
             ,UserManager<ApplicationUser> userManager,
-            IEmailSender emailSender)
+            IEmailSender emailSender,
+            IOrderItemRepository orderItemRepository,
+            IProductRepository productRepository)
         {
             _cartRepository = cartRepository;
             _orderRepository = orderRepository;
             _userManager = userManager;
             _emailSender = emailSender;
+            _orderItemRepository = orderItemRepository;
+            _productRepository = productRepository;
         }
 
         public async Task<CheckoutResponse> ProcessPaymentAsync(CheckoutRequest request, string userId)
@@ -142,8 +148,33 @@ namespace KASHOP12.BLL.Service
             var order = await _orderRepository.GetBySessionIdAsync(sessionId);
             order.PaymentId = session.PaymentIntentId;
             order.OrderStatus = OrderStatusEnum.Approved;
+
             await _orderRepository.UpdateAsync(order);
+
             var user = await _userManager.FindByIdAsync(userId);
+
+
+
+            var cartItems = await _cartRepository.GetUserCartAsync(userId);
+            var orderItems = new List<OrderItem>();
+            var productUpdated = new List<(int productId, int quantity)>();
+            foreach(var cartItem in cartItems)
+            {
+                var orderItem = new OrderItem
+                {
+                    OrderId = order.Id,
+                    ProductId = cartItem.ProductId,
+                    UnitPrice = cartItem.Product.Price,
+                    Quantity = cartItem.Count,
+                    TotalPrice = cartItem.Product.Price * cartItem.Count,
+
+                };
+                orderItems.Add(orderItem);
+                productUpdated.Add((cartItem.ProductId, cartItem.Count));
+                await _productRepository.DecreaseQuantitiesAsync(productUpdated);
+            }
+            await _orderItemRepository.CreateRangeAsync(orderItems);
+            await _cartRepository.ClearCartAsync(userId);
             await _emailSender.SendEmailAsync(user.Email, "Payment Successfull", "<h2> Thank you ......</h2>");
 
             return new CheckoutResponse

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using KASHOP12.DAL.Models;
 
 namespace KASHOP12.DAL.Data.DTO.Response
 {
@@ -18,5 +19,9 @@ namespace KASHOP12.DAL.Data.DTO.Response
         public int Quantity { get; set; }
         public double Rate { get; set; }
         public string MainImage { get; set; }
+        public List<string> SubImages { get; set; }
+        public List<ReviewResponse> Reviews { get; set; }
+      
+
     }
 }

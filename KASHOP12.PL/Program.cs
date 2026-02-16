@@ -9,6 +9,7 @@ using KASHOP12.DAL.Data;
 using KASHOP12.DAL.Models;
 using KASHOP12.DAL.Repository;
 using KASHOP12.DAL.Utils;
+using KASHOP12.PL.MiddleWare;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 
@@ -150,6 +151,8 @@ namespace KASHOP12.PL
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+
+            app.UseMiddleware<GlobalExceptionHandling>();
             app.UseStaticFiles();
             app.UseHttpsRedirection();
 

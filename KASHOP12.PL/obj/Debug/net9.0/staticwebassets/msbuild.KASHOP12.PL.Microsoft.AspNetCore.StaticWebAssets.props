@@ -1,5 +1,59 @@
 ﻿<Project>
   <ItemGroup>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\178c7b9c-afd1-4733-a55e-325c305315fc.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>KASHOP12.PL</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/KASHOP12.PL</BasePath>
+      <RelativePath>Images/178c7b9c-afd1-4733-a55e-325c305315fc.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>py4mnq3gw6</Fingerprint>
+      <Integrity>X+6kZkdq9h2DpeRldOcxkigXnUOjS2R0MtnnBhlM0a8=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\178c7b9c-afd1-4733-a55e-325c305315fc.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\381c4a9e-7017-4289-9b90-0a1d1e2a739f.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>KASHOP12.PL</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/KASHOP12.PL</BasePath>
+      <RelativePath>Images/381c4a9e-7017-4289-9b90-0a1d1e2a739f.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>o7ux9f1jb4</Fingerprint>
+      <Integrity>zNOYcMimgNvZGqbT2LT66CRxYRAqfp1RjxLPUD5ZMXA=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\381c4a9e-7017-4289-9b90-0a1d1e2a739f.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\4f52f232-f2b6-4c8a-980c-0d3b9511bcd5.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>KASHOP12.PL</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/KASHOP12.PL</BasePath>
+      <RelativePath>Images/4f52f232-f2b6-4c8a-980c-0d3b9511bcd5.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>3970hdjoad</Fingerprint>
+      <Integrity>t1lQMXLHmslxoPcvD3t4L7ekkUMYWW2SGN6OgUGsok8=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\4f52f232-f2b6-4c8a-980c-0d3b9511bcd5.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\680dd596-b330-49ed-a2f7-3b5ab36c3a5d.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>KASHOP12.PL</SourceId>
@@ -18,6 +72,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\680dd596-b330-49ed-a2f7-3b5ab36c3a5d.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\920efaf0-e0d1-46b0-a7a1-c3a89ffc82b0.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>KASHOP12.PL</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/KASHOP12.PL</BasePath>
+      <RelativePath>Images/920efaf0-e0d1-46b0-a7a1-c3a89ffc82b0.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>py4mnq3gw6</Fingerprint>
+      <Integrity>X+6kZkdq9h2DpeRldOcxkigXnUOjS2R0MtnnBhlM0a8=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\920efaf0-e0d1-46b0-a7a1-c3a89ffc82b0.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\b7744fca-330c-497c-8bb1-c1bfa666970a.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>KASHOP12.PL</SourceId>
@@ -35,6 +107,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\b7744fca-330c-497c-8bb1-c1bfa666970a.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\ba68a3a6-032b-4a4e-b290-2476115f62e1.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>KASHOP12.PL</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/KASHOP12.PL</BasePath>
+      <RelativePath>Images/ba68a3a6-032b-4a4e-b290-2476115f62e1.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>my50wi4o2h</Fingerprint>
+      <Integrity>LgZMAR4EBn5UBTE3uSpWPQinBqkQtU+7TA4CqUDKOe4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\ba68a3a6-032b-4a4e-b290-2476115f62e1.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\c00346b0-4621-4622-a77c-f5c0eb9290ef.jpg'))">
       <SourceType>Package</SourceType>
@@ -71,6 +161,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\de413b67-bb4c-4861-b29c-90d691efd1a0.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\de7bb6f6-a782-4f48-868b-d6c48a5e9aff.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>KASHOP12.PL</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/KASHOP12.PL</BasePath>
+      <RelativePath>Images/de7bb6f6-a782-4f48-868b-d6c48a5e9aff.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>py4mnq3gw6</Fingerprint>
+      <Integrity>X+6kZkdq9h2DpeRldOcxkigXnUOjS2R0MtnnBhlM0a8=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Images\de7bb6f6-a782-4f48-868b-d6c48a5e9aff.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>
 </Project>

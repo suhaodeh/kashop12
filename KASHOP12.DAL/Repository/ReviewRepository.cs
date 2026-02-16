@@ -1,0 +1,33 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using KASHOP12.DAL.Data;
+using KASHOP12.DAL.Models;
+using Microsoft.EntityFrameworkCore;
+
+namespace KASHOP12.DAL.Repository
+{
+    public class ReviewRepository : IReviewRepository
+    {
+        private readonly ApplicationDbContext _context;
+
+        public ReviewRepository(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+
+        public async Task<bool> HasUserReviewdProduct(string userId, int productId)
+        {
+            return await _context.Reviews.AnyAsync(r => r.UserId == userId && r.ProductId == productId);
+        }
+
+        public async Task<Review> CreateAsync(Review Request)
+        {
+            await _context.AddAsync(Request);
+            await _context.SaveChangesAsync();
+            return Request;
+        }
+    }
+}

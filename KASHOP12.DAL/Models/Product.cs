@@ -18,7 +18,10 @@ namespace KASHOP12.DAL.Models
 
         public   Category Category { get; set; }
         public List<ProductTranslations> Translations { get; set; }
-   
+        public List<ProductImages> SubImages { get; set; }
+     
+        public List<Review> Reviews { get; set; }
+
 
 
     }

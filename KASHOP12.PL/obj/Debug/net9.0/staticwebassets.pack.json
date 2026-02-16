@@ -1,12 +1,32 @@
 {
   "Files": [
     {
+      "Id": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.PL\\wwwroot\\Images\\178c7b9c-afd1-4733-a55e-325c305315fc.jpg",
+      "PackagePath": "staticwebassets\\Images\\178c7b9c-afd1-4733-a55e-325c305315fc.jpg"
+    },
+    {
+      "Id": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.PL\\wwwroot\\Images\\381c4a9e-7017-4289-9b90-0a1d1e2a739f.png",
+      "PackagePath": "staticwebassets\\Images\\381c4a9e-7017-4289-9b90-0a1d1e2a739f.png"
+    },
+    {
+      "Id": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.PL\\wwwroot\\Images\\4f52f232-f2b6-4c8a-980c-0d3b9511bcd5.jpg",
+      "PackagePath": "staticwebassets\\Images\\4f52f232-f2b6-4c8a-980c-0d3b9511bcd5.jpg"
+    },
+    {
       "Id": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.PL\\wwwroot\\Images\\680dd596-b330-49ed-a2f7-3b5ab36c3a5d.jpg",
       "PackagePath": "staticwebassets\\Images\\680dd596-b330-49ed-a2f7-3b5ab36c3a5d.jpg"
     },
     {
+      "Id": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.PL\\wwwroot\\Images\\920efaf0-e0d1-46b0-a7a1-c3a89ffc82b0.jpg",
+      "PackagePath": "staticwebassets\\Images\\920efaf0-e0d1-46b0-a7a1-c3a89ffc82b0.jpg"
+    },
+    {
       "Id": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.PL\\wwwroot\\Images\\b7744fca-330c-497c-8bb1-c1bfa666970a.jpg",
       "PackagePath": "staticwebassets\\Images\\b7744fca-330c-497c-8bb1-c1bfa666970a.jpg"
+    },
+    {
+      "Id": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.PL\\wwwroot\\Images\\ba68a3a6-032b-4a4e-b290-2476115f62e1.jpg",
+      "PackagePath": "staticwebassets\\Images\\ba68a3a6-032b-4a4e-b290-2476115f62e1.jpg"
     },
     {
       "Id": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.PL\\wwwroot\\Images\\c00346b0-4621-4622-a77c-f5c0eb9290ef.jpg",
@@ -15,6 +35,10 @@
     {
       "Id": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.PL\\wwwroot\\Images\\de413b67-bb4c-4861-b29c-90d691efd1a0.jpg",
       "PackagePath": "staticwebassets\\Images\\de413b67-bb4c-4861-b29c-90d691efd1a0.jpg"
+    },
+    {
+      "Id": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.PL\\wwwroot\\Images\\de7bb6f6-a782-4f48-868b-d6c48a5e9aff.jpg",
+      "PackagePath": "staticwebassets\\Images\\de7bb6f6-a782-4f48-868b-d6c48a5e9aff.jpg"
     },
     {
       "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.KASHOP12.PL.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

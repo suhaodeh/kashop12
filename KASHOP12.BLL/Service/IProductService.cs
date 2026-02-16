@@ -12,7 +12,14 @@ namespace KASHOP12.BLL.Service
     {
         Task<ProductResponse> CreateProduct(ProductRequest request);
         Task<List<ProductResponse>> GetAllProductsforAdmin();
-        Task<List<ProductUserResponse>> GetAllProductsForUser(int page = 1, int limit = 3);
+        Task<PagenatedResponse<ProductUserResponse>> GetAllProductsForUser(string lang = "en", int page = 1, int limit = 3,
+               string? search = null,
+               int? categoryId = null,
+               decimal? minPrice = null,
+               decimal? maxPrice = null,
+               string? sortBy = null,
+               bool asc = true
+               );
         Task<ProductUserDetails> GetAllProductDetailsForUser(int id, string lang = "en");
     }
 }

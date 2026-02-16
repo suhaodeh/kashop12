@@ -24,6 +24,8 @@ namespace KASHOP12.DAL.Data
         public DbSet<Cart>Carts { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderItem> OrderItems { get; set; }
+        public DbSet<ProductImages> productImages { get; set; }
+        public DbSet<Review> Reviews { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options,
             IHttpContextAccessor ihttpContextAccessor)

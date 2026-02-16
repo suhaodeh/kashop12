@@ -1,6 +1,9 @@
-﻿using KASHOP12.BLL.Service;
+﻿using System.Security.Claims;
+using KASHOP12.BLL.Service;
+using KASHOP12.DAL.Data.DTO.Request;
 using KASHOP12.PL.Resources;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
 
@@ -12,17 +15,27 @@ namespace KASHOP12.PL.Areas.User
     {
         private readonly IProductService _productService;
         private readonly IStringLocalizer _localizer;
+        private readonly IReviewService _reviewService;
 
-        public ProductsController(IProductService productService, IStringLocalizer<SharedResource> localizer)
+        public ProductsController(IProductService productService, IStringLocalizer<SharedResource> localizer,
+            IReviewService reviewService)
         {
             _productService = productService;
             _localizer = localizer;
+            _reviewService = reviewService;
         }
 
         [HttpGet("")]
-        public async Task<IActionResult> Index([FromQuery] int page = 1, [FromQuery] int limit = 3)
+        public async Task<IActionResult> Index([FromQuery] string lang ="en", [FromQuery] int page = 1, [FromQuery] int limit = 3,
+            [FromQuery] string? search = null, [FromQuery] int? categoryId = null,
+            [FromQuery] decimal? minPrice=null,
+            [FromQuery] decimal? maxPrice=null,
+              [FromQuery] string? sortBy = null,
+               [FromQuery] bool asc = true
+            )
         {
-            var response = await _productService.GetAllProductsForUser(page,limit);
+            var response = await _productService.GetAllProductsForUser(lang,page,limit,search,categoryId,minPrice,
+                maxPrice,sortBy,asc);
             return Ok(new { message = _localizer["Success"].Value, response });
         }
 
@@ -32,5 +45,16 @@ namespace KASHOP12.PL.Areas.User
             var response = await _productService.GetAllProductDetailsForUser(id,lang);
             return Ok(new { message = _localizer["Success"].Value, response });
         }
+
+
+        [HttpPost("{productId}/reviews")]
+        public async Task<IActionResult> AddReview([FromRoute]int productId, [FromBody] CreateReviewRequest request)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var response = await _reviewService.AddReviewAsync(userId, productId, request);
+            if (!response.Success) return BadRequest(new { message = response.Message });
+            return Ok(new { message = response.Message });
+        }
+
     }
 }

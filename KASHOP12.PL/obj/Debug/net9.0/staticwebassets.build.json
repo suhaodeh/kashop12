@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0w6nU+JWN6CjV/z8Rl/BENIEE41ImTQJG0qyhE+XtPg=",
+  "Hash": "0we/l4qHGWYnBTD6dJMFFDxvz+vXNlF/TCHDLMui5fI=",
   "Source": "KASHOP12.PL",
   "BasePath": "_content/KASHOP12.PL",
   "Mode": "Default",
@@ -16,6 +16,69 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.PL\\wwwroot\\Images\\178c7b9c-afd1-4733-a55e-325c305315fc.jpg",
+      "SourceId": "KASHOP12.PL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.PL\\wwwroot\\",
+      "BasePath": "_content/KASHOP12.PL",
+      "RelativePath": "Images/178c7b9c-afd1-4733-a55e-325c305315fc#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "py4mnq3gw6",
+      "Integrity": "X+6kZkdq9h2DpeRldOcxkigXnUOjS2R0MtnnBhlM0a8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\178c7b9c-afd1-4733-a55e-325c305315fc.jpg"
+    },
+    {
+      "Identity": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.PL\\wwwroot\\Images\\381c4a9e-7017-4289-9b90-0a1d1e2a739f.png",
+      "SourceId": "KASHOP12.PL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.PL\\wwwroot\\",
+      "BasePath": "_content/KASHOP12.PL",
+      "RelativePath": "Images/381c4a9e-7017-4289-9b90-0a1d1e2a739f#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "o7ux9f1jb4",
+      "Integrity": "zNOYcMimgNvZGqbT2LT66CRxYRAqfp1RjxLPUD5ZMXA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\381c4a9e-7017-4289-9b90-0a1d1e2a739f.png"
+    },
+    {
+      "Identity": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.PL\\wwwroot\\Images\\4f52f232-f2b6-4c8a-980c-0d3b9511bcd5.jpg",
+      "SourceId": "KASHOP12.PL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.PL\\wwwroot\\",
+      "BasePath": "_content/KASHOP12.PL",
+      "RelativePath": "Images/4f52f232-f2b6-4c8a-980c-0d3b9511bcd5#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "3970hdjoad",
+      "Integrity": "t1lQMXLHmslxoPcvD3t4L7ekkUMYWW2SGN6OgUGsok8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\4f52f232-f2b6-4c8a-980c-0d3b9511bcd5.jpg"
+    },
     {
       "Identity": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.PL\\wwwroot\\Images\\680dd596-b330-49ed-a2f7-3b5ab36c3a5d.jpg",
       "SourceId": "KASHOP12.PL",
@@ -38,6 +101,27 @@
       "OriginalItemSpec": "wwwroot\\Images\\680dd596-b330-49ed-a2f7-3b5ab36c3a5d.jpg"
     },
     {
+      "Identity": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.PL\\wwwroot\\Images\\920efaf0-e0d1-46b0-a7a1-c3a89ffc82b0.jpg",
+      "SourceId": "KASHOP12.PL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.PL\\wwwroot\\",
+      "BasePath": "_content/KASHOP12.PL",
+      "RelativePath": "Images/920efaf0-e0d1-46b0-a7a1-c3a89ffc82b0#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "py4mnq3gw6",
+      "Integrity": "X+6kZkdq9h2DpeRldOcxkigXnUOjS2R0MtnnBhlM0a8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\920efaf0-e0d1-46b0-a7a1-c3a89ffc82b0.jpg"
+    },
+    {
       "Identity": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.PL\\wwwroot\\Images\\b7744fca-330c-497c-8bb1-c1bfa666970a.jpg",
       "SourceId": "KASHOP12.PL",
       "SourceType": "Discovered",
@@ -57,6 +141,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\b7744fca-330c-497c-8bb1-c1bfa666970a.jpg"
+    },
+    {
+      "Identity": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.PL\\wwwroot\\Images\\ba68a3a6-032b-4a4e-b290-2476115f62e1.jpg",
+      "SourceId": "KASHOP12.PL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.PL\\wwwroot\\",
+      "BasePath": "_content/KASHOP12.PL",
+      "RelativePath": "Images/ba68a3a6-032b-4a4e-b290-2476115f62e1#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "my50wi4o2h",
+      "Integrity": "LgZMAR4EBn5UBTE3uSpWPQinBqkQtU+7TA4CqUDKOe4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\ba68a3a6-032b-4a4e-b290-2476115f62e1.jpg"
     },
     {
       "Identity": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.PL\\wwwroot\\Images\\c00346b0-4621-4622-a77c-f5c0eb9290ef.jpg",
@@ -99,9 +204,276 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\de413b67-bb4c-4861-b29c-90d691efd1a0.jpg"
+    },
+    {
+      "Identity": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.PL\\wwwroot\\Images\\de7bb6f6-a782-4f48-868b-d6c48a5e9aff.jpg",
+      "SourceId": "KASHOP12.PL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.PL\\wwwroot\\",
+      "BasePath": "_content/KASHOP12.PL",
+      "RelativePath": "Images/de7bb6f6-a782-4f48-868b-d6c48a5e9aff#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "py4mnq3gw6",
+      "Integrity": "X+6kZkdq9h2DpeRldOcxkigXnUOjS2R0MtnnBhlM0a8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\de7bb6f6-a782-4f48-868b-d6c48a5e9aff.jpg"
     }
   ],
   "Endpoints": [
+    {
+      "Route": "Images/178c7b9c-afd1-4733-a55e-325c305315fc.jpg",
+      "AssetFile": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.PL\\wwwroot\\Images\\178c7b9c-afd1-4733-a55e-325c305315fc.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "26773"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"X+6kZkdq9h2DpeRldOcxkigXnUOjS2R0MtnnBhlM0a8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 25 Jan 2026 13:06:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-X+6kZkdq9h2DpeRldOcxkigXnUOjS2R0MtnnBhlM0a8="
+        }
+      ]
+    },
+    {
+      "Route": "Images/178c7b9c-afd1-4733-a55e-325c305315fc.py4mnq3gw6.jpg",
+      "AssetFile": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.PL\\wwwroot\\Images\\178c7b9c-afd1-4733-a55e-325c305315fc.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "26773"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"X+6kZkdq9h2DpeRldOcxkigXnUOjS2R0MtnnBhlM0a8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 25 Jan 2026 13:06:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "py4mnq3gw6"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/178c7b9c-afd1-4733-a55e-325c305315fc.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-X+6kZkdq9h2DpeRldOcxkigXnUOjS2R0MtnnBhlM0a8="
+        }
+      ]
+    },
+    {
+      "Route": "Images/381c4a9e-7017-4289-9b90-0a1d1e2a739f.o7ux9f1jb4.png",
+      "AssetFile": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.PL\\wwwroot\\Images\\381c4a9e-7017-4289-9b90-0a1d1e2a739f.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "471473"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zNOYcMimgNvZGqbT2LT66CRxYRAqfp1RjxLPUD5ZMXA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Feb 2026 18:03:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "o7ux9f1jb4"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/381c4a9e-7017-4289-9b90-0a1d1e2a739f.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-zNOYcMimgNvZGqbT2LT66CRxYRAqfp1RjxLPUD5ZMXA="
+        }
+      ]
+    },
+    {
+      "Route": "Images/381c4a9e-7017-4289-9b90-0a1d1e2a739f.png",
+      "AssetFile": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.PL\\wwwroot\\Images\\381c4a9e-7017-4289-9b90-0a1d1e2a739f.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "471473"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zNOYcMimgNvZGqbT2LT66CRxYRAqfp1RjxLPUD5ZMXA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Feb 2026 18:03:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-zNOYcMimgNvZGqbT2LT66CRxYRAqfp1RjxLPUD5ZMXA="
+        }
+      ]
+    },
+    {
+      "Route": "Images/4f52f232-f2b6-4c8a-980c-0d3b9511bcd5.3970hdjoad.jpg",
+      "AssetFile": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.PL\\wwwroot\\Images\\4f52f232-f2b6-4c8a-980c-0d3b9511bcd5.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "157782"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"t1lQMXLHmslxoPcvD3t4L7ekkUMYWW2SGN6OgUGsok8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Feb 2026 18:03:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3970hdjoad"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/4f52f232-f2b6-4c8a-980c-0d3b9511bcd5.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-t1lQMXLHmslxoPcvD3t4L7ekkUMYWW2SGN6OgUGsok8="
+        }
+      ]
+    },
+    {
+      "Route": "Images/4f52f232-f2b6-4c8a-980c-0d3b9511bcd5.jpg",
+      "AssetFile": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.PL\\wwwroot\\Images\\4f52f232-f2b6-4c8a-980c-0d3b9511bcd5.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "157782"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"t1lQMXLHmslxoPcvD3t4L7ekkUMYWW2SGN6OgUGsok8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Feb 2026 18:03:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-t1lQMXLHmslxoPcvD3t4L7ekkUMYWW2SGN6OgUGsok8="
+        }
+      ]
+    },
     {
       "Route": "Images/680dd596-b330-49ed-a2f7-3b5ab36c3a5d.19frd1g37i.jpg",
       "AssetFile": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.PL\\wwwroot\\Images\\680dd596-b330-49ed-a2f7-3b5ab36c3a5d.jpg",
@@ -185,6 +557,88 @@
       ]
     },
     {
+      "Route": "Images/920efaf0-e0d1-46b0-a7a1-c3a89ffc82b0.jpg",
+      "AssetFile": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.PL\\wwwroot\\Images\\920efaf0-e0d1-46b0-a7a1-c3a89ffc82b0.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "26773"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"X+6kZkdq9h2DpeRldOcxkigXnUOjS2R0MtnnBhlM0a8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 01 Feb 2026 13:04:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-X+6kZkdq9h2DpeRldOcxkigXnUOjS2R0MtnnBhlM0a8="
+        }
+      ]
+    },
+    {
+      "Route": "Images/920efaf0-e0d1-46b0-a7a1-c3a89ffc82b0.py4mnq3gw6.jpg",
+      "AssetFile": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.PL\\wwwroot\\Images\\920efaf0-e0d1-46b0-a7a1-c3a89ffc82b0.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "26773"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"X+6kZkdq9h2DpeRldOcxkigXnUOjS2R0MtnnBhlM0a8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 01 Feb 2026 13:04:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "py4mnq3gw6"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/920efaf0-e0d1-46b0-a7a1-c3a89ffc82b0.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-X+6kZkdq9h2DpeRldOcxkigXnUOjS2R0MtnnBhlM0a8="
+        }
+      ]
+    },
+    {
       "Route": "Images/b7744fca-330c-497c-8bb1-c1bfa666970a.19frd1g37i.jpg",
       "AssetFile": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.PL\\wwwroot\\Images\\b7744fca-330c-497c-8bb1-c1bfa666970a.jpg",
       "Selectors": [],
@@ -263,6 +717,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-9RZ2tkvfAxpP2NJURYerm4n0QH1QOzb/qjF2W9BxTuo="
+        }
+      ]
+    },
+    {
+      "Route": "Images/ba68a3a6-032b-4a4e-b290-2476115f62e1.jpg",
+      "AssetFile": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.PL\\wwwroot\\Images\\ba68a3a6-032b-4a4e-b290-2476115f62e1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "81102"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LgZMAR4EBn5UBTE3uSpWPQinBqkQtU+7TA4CqUDKOe4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Feb 2026 18:03:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-LgZMAR4EBn5UBTE3uSpWPQinBqkQtU+7TA4CqUDKOe4="
+        }
+      ]
+    },
+    {
+      "Route": "Images/ba68a3a6-032b-4a4e-b290-2476115f62e1.my50wi4o2h.jpg",
+      "AssetFile": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.PL\\wwwroot\\Images\\ba68a3a6-032b-4a4e-b290-2476115f62e1.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "81102"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LgZMAR4EBn5UBTE3uSpWPQinBqkQtU+7TA4CqUDKOe4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 09 Feb 2026 18:03:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "my50wi4o2h"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/ba68a3a6-032b-4a4e-b290-2476115f62e1.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-LgZMAR4EBn5UBTE3uSpWPQinBqkQtU+7TA4CqUDKOe4="
         }
       ]
     },
@@ -427,6 +963,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-G0LhpZHUSFHmKr6i7+ghpRIsVf4lO/ZJZnoZbykOhvg="
+        }
+      ]
+    },
+    {
+      "Route": "Images/de7bb6f6-a782-4f48-868b-d6c48a5e9aff.jpg",
+      "AssetFile": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.PL\\wwwroot\\Images\\de7bb6f6-a782-4f48-868b-d6c48a5e9aff.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "26773"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"X+6kZkdq9h2DpeRldOcxkigXnUOjS2R0MtnnBhlM0a8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 25 Jan 2026 13:08:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-X+6kZkdq9h2DpeRldOcxkigXnUOjS2R0MtnnBhlM0a8="
+        }
+      ]
+    },
+    {
+      "Route": "Images/de7bb6f6-a782-4f48-868b-d6c48a5e9aff.py4mnq3gw6.jpg",
+      "AssetFile": "D:\\HMS\\KASHOP12\\KASHOP12\\KASHOP12.PL\\wwwroot\\Images\\de7bb6f6-a782-4f48-868b-d6c48a5e9aff.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "26773"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"X+6kZkdq9h2DpeRldOcxkigXnUOjS2R0MtnnBhlM0a8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 25 Jan 2026 13:08:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "py4mnq3gw6"
+        },
+        {
+          "Name": "label",
+          "Value": "Images/de7bb6f6-a782-4f48-868b-d6c48a5e9aff.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-X+6kZkdq9h2DpeRldOcxkigXnUOjS2R0MtnnBhlM0a8="
         }
       ]
     }

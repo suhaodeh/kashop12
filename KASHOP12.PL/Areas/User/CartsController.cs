@@ -40,6 +40,21 @@ namespace KASHOP12.PL.Areas.User
 
         }
 
+
+        [HttpPatch("{productId}")]
+        public async Task<IActionResult> UpdateQuantity([FromRoute] int productId, [FromBody] UpdateQuantityRequest request)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var result = await _cartService.UpdateQuantityAsync(userId, productId,request.Count);
+            if (!result.Success) return BadRequest(result);
+            return Ok(result);
+
+        }
+       
+
+
+
+
         [HttpDelete("")]
         public async Task<IActionResult> ClearCart()
         {
@@ -49,5 +64,15 @@ namespace KASHOP12.PL.Areas.User
             return Ok(result);
 
         }
-}
+
+        [HttpDelete("{productId}")]
+        public async Task<IActionResult> DeleteItemFromCart([FromRoute] int productId)
+        {
+
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var result = await _cartService.RemoveFromCartAsync(userId,productId);
+            return Ok(result);
+
+        }
+    }
 }

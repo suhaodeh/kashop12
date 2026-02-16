@@ -32,21 +32,87 @@ namespace KASHOP12.BLL.Service
                 product.MainImage = imagePath;
             }
 
-            await _productRepository.AddAsync(product);
+            if (request.subImages != null)
+            {
+                product.SubImages = new List<ProductImages>();
+                foreach(var file in request.subImages)
+                {
+                    var imagePath = await _fileService.UploadAsync(file);
+                    product.SubImages.Add(new ProductImages
+                    {
+                        ImageName = imagePath
+                    });
+
+
+                }
+            }
+
+                await _productRepository.AddAsync(product);
             return product.Adapt<ProductResponse>();
 
         }
 
      
 
-        public async Task<List<ProductUserResponse>> GetAllProductsForUser(int page=1,int limit =3)
+        public async Task<PagenatedResponse<ProductUserResponse>> GetAllProductsForUser(string lang ="en", int page=1,int limit =3,
+            string? search=null,
+            int?categoryId =null,
+            decimal? minPrice=null,
+            decimal? maxPrice=null,
+            string? sortBy=null,
+            bool asc=true
+            )
         {
             var query =  _productRepository.Query();
+            if(search is not null)
+            {
+                query = query.Where(p => p.Translations.Any(t => t.Language == lang && t.Name.Contains(search) || t.Description.Contains(search)));
+            }
+
+            if(categoryId is not null)
+            {
+                query = query.Where(p => p.CategoryId == categoryId);
+            }
+
+            if(minPrice is not null)
+            {
+                query = query.Where(p => p.Price >= minPrice);
+            }
+
+            if(maxPrice is not null)
+            {
+                query = query.Where(p => p.Price <= maxPrice);
+            }
+
+            if(sortBy is not null)
+            {
+                sortBy = sortBy.ToLower();
+                if (sortBy == "price")
+                {
+                    query = asc ? query.OrderBy(p => p.Price) : query.OrderByDescending(p => p.Price);
+                }else if (sortBy == "name")
+                {
+                    query = asc ? query.OrderBy(p => p.Translations.FirstOrDefault(t => t.Language == lang).Name)
+                        : query.OrderByDescending(p => p.Translations.FirstOrDefault(t => t.Language == lang).Name);
+                }else if (sortBy == "rate")
+                {
+                    query = asc ? query.OrderBy(p => p.Rate) : query.OrderByDescending(p =>p.Rate);
+                }
+            }
+
+
             var totalCount = await query.CountAsync();
+
             query = query.Skip((page - 1) * limit).Take(limit);
 
-            var response = query.Adapt<List<ProductUserResponse>>();
-            return response;
+            var response = query.BuildAdapter().AddParameters("lang", lang).AdaptToType<List<ProductUserResponse>>();
+            return new PagenatedResponse<ProductUserResponse>
+            {
+                TotalCount = totalCount,
+                Page = page,
+                Limit = limit,
+                Data = response
+            };
         }
 
         public async Task<List<ProductResponse>> GetAllProductsforAdmin()
